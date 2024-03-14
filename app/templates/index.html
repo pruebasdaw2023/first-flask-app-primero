@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>{{ data.titulo }}</title>
 </head>
 <body>
     <h1>Hola mundo desde plantilla de FLASK!!!</h1>
+    <h2>{{ data }}</h2>
+    <h2>{{ data.titulo }}</h2>
+    <h2>{{ data.bienvenida }}</h2>
+
+    <ul>
+        {% for c in data.cursos %}
+        <li>{{ c }}</li>
+        {% endfor %}
+    </ul>
+
 </body>
 </html>
