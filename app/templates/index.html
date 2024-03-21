@@ -7,15 +7,19 @@
 </head>
 <body>
     <h1>Hola mundo desde plantilla de FLASK!!!</h1>
-    <h2>{{ data }}</h2>
-    <h2>{{ data.titulo }}</h2>
+    <!-- <h2>{{ data }}</h2> -->
+    <!-- <h2>{{ data.titulo }}</h2> -->
     <h2>{{ data.bienvenida }}</h2>
 
+    {% if data.numero_cursos > 0 %}
     <ul>
         {% for c in data.cursos %}
         <li>{{ c }}</li>
         {% endfor %}
     </ul>
+    {% else %}
+    <h2>No hay cursos...</h2>
+    {% endif %}
 
 </body>
 </html>
